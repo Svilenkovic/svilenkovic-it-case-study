@@ -2,7 +2,7 @@
 
 Domeni, mail i web bezbednost.
 
-**[svilenkovicit.com](https://svilenkovicit.com/)** · [English](README.md)
+**[svilenkovicit.com](https://svilenkovicit.com/)** · [Studija: ARHIFARM](https://svilenkovicit.com/projekti/arhifarm/) · [English](README.md)
 
 > [!NOTE]
 > Samostalni projekat D. Svilenkovića. Produkcijski izvor ostaje u privatnom repozitorijumu; ovaj javni repozitorijum dokumentuje izvedeni rad.
@@ -10,7 +10,7 @@ Domeni, mail i web bezbednost.
 <table>
   <tr><td><b>Vrsta</b></td><td>Domeni, mail i web bezbednost</td></tr>
   <tr><td><b>Jezici</b></td><td>srpski i engleski</td></tr>
-  <tr><td><b>Javne rute</b></td><td>26 canonical stranica</td></tr>
+  <tr><td><b>Javne rute</b></td><td>28 canonical stranica</td></tr>
   <tr><td><b>Uloga</b></td><td>istraživanje, dizajn, razvoj, SEO, hosting i održavanje</td></tr>
   <tr><td><b>Tehnologije</b></td><td>Astro, TypeScript, CSS, PHP 8.3, SQLite, nginx</td></tr>
 </table>
@@ -28,7 +28,7 @@ Optička mreža vodi pakete kroz cijan čvorove na tamnoplavom polju. Animacija 
 - Posebne stranice za domene, DNS, mail, TLS i održavanje
 - Vizuelni put paketa vezan za objašnjenje usluge
 - Bezbednosna zaglavlja i provere privatnih putanja na živom izdanju
-- Dvojezična informaciona arhitektura sa 26 canonical ruta
+- Dvojezična informaciona arhitektura sa 28 canonical ruta
 - Kontakt forma izdvojena po domenu i zaštićena validacijom i ograničenjem učestalosti
 
 ## Provere izdanja

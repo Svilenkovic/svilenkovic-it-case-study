@@ -2,7 +2,7 @@
 
 A technical service site that makes domains, mail delivery, TLS and website security understandable to business owners.
 
-**[svilenkovicit.com](https://svilenkovicit.com/)** · [Srpski](README.sr.md)
+**[svilenkovicit.com](https://svilenkovicit.com/)** · [ARHIFARM case study](https://svilenkovicit.com/en/projects/arhifarm/) · [Srpski](README.sr.md)
 
 > [!NOTE]
 > This is an independent project by D. Svilenković. The production source stays in a private repository; this public repository documents the work.
@@ -10,7 +10,7 @@ A technical service site that makes domains, mail delivery, TLS and website secu
 <table>
   <tr><td><b>Type</b></td><td>Domains, mail and web security</td></tr>
   <tr><td><b>Languages</b></td><td>Serbian and English</td></tr>
-  <tr><td><b>Public routes</b></td><td>26 canonical pages</td></tr>
+  <tr><td><b>Public routes</b></td><td>28 canonical pages</td></tr>
   <tr><td><b>Role</b></td><td>Research, design, development, SEO, hosting and maintenance</td></tr>
   <tr><td><b>Stack</b></td><td>Astro, TypeScript, CSS, PHP 8.3, SQLite, nginx</td></tr>
 </table>
@@ -28,7 +28,7 @@ An optical network carries packets through cyan nodes on a dark blue field. The 
 - Separate pages for domains, DNS, mail, TLS and maintenance
 - A visual packet path tied to the service explanation
 - Security headers and private-path checks on the live release
-- A bilingual information architecture with 26 canonical routes
+- A bilingual information architecture with 28 canonical routes
 - Contact forms isolated per domain and protected by validation and rate limits
 
 ## Release checks
