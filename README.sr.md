@@ -1,42 +1,58 @@
+<a href="https://svilenkovicit.com/"><img src="media/cover.jpg" alt="Svilenković IT, naslovna strana na laptopu i telefonu" width="100%"></a>
+
 # Svilenković IT
 
-Domeni, mail i web bezbednost.
+Domen, DNS, poslovni mejl i sertifikat objašnjeni bez žargona, uz proveru DNS zapisa koja radi u pregledaču posetioca.
 
-**[svilenkovicit.com](https://svilenkovicit.com/)** · [Studija: ARHIFARM](https://svilenkovicit.com/projekti/arhifarm/) · [English](README.md)
+**[svilenkovicit.com](https://svilenkovicit.com/)** · [Studija slučaja](https://svilenkovic.rs/radovi/svilenkovic-it) · [English](README.md)
 
 > [!NOTE]
-> Samostalni projekat D. Svilenkovića. Produkcijski izvor ostaje u privatnom repozitorijumu; ovaj javni repozitorijum dokumentuje izvedeni rad.
+> Moj sopstveni projekat, ne klijentski posao. Izvorni kod je privatan. Ova stranica opisuje šta sajt radi i kako je napravljen.
 
 <table>
-  <tr><td><b>Vrsta</b></td><td>Domeni, mail i web bezbednost</td></tr>
-  <tr><td><b>Jezici</b></td><td>srpski i engleski</td></tr>
-  <tr><td><b>Javne rute</b></td><td>28 canonical stranica</td></tr>
-  <tr><td><b>Uloga</b></td><td>istraživanje, dizajn, razvoj, SEO, hosting i održavanje</td></tr>
-  <tr><td><b>Tehnologije</b></td><td>Astro, TypeScript, CSS, PHP 8.3, SQLite, nginx</td></tr>
+  <tr><td><b>Klijent</b></td><td>Sopstveni projekat</td></tr>
+  <tr><td><b>Delatnost</b></td><td>Domen, poslovni mejl i sigurnost sajta</td></tr>
+  <tr><td><b>Lokacija</b></td><td>Srbija</td></tr>
+  <tr><td><b>Vrsta</b></td><td>Sajt sa više strana i proverom DNS zapisa</td></tr>
+  <tr><td><b>Moj deo posla</b></td><td>Istraživanje, dizajn, izrada, SEO i hosting</td></tr>
+  <tr><td><b>Tehnologije</b></td><td>Astro 7, GSAP, DNS-over-HTTPS, PHP 8.3, SQLite, nginx</td></tr>
 </table>
 
-## Namena
+## O projektu
 
-O domenima i mailu se obično govori tek kada nešto prestane da radi. Ovaj sajt svakom delu sistema daje jasno mesto, od DNS-a i sertifikata do isporuke pošte i produkcijskih provera.
+Mala firma o domenu i pošti obično razmišlja tek kad mejlovi počnu da idu u spam ili kad domen istekne. Svilenković IT objašnjava delove koji rade u pozadini, pisano za vlasnika firme, ne za administratora. Svaka strana je jedan list, kao na nacrtu instalacije, sa brojem lista, razmerom i datumom revizije, i odgovara na jedno pitanje, od mejlova u spamu do toga šta raditi kad je sajt hakovan.
 
-## Dizajn pravac
+Provera DNS zapisa pita javni DNS za NS, A, AAAA, MX, SPF, DKIM, DMARC, CAA i DNSSEC i uz svaki nalaz na srpskom kaže da li je u redu. Upiti idu preko DNS-over-HTTPS direktno iz pregledača posetioca ka Cloudflare-u ili Google-u, pa ni domen ni rezultat ne stižu na moj server, a politika sadržaja dozvoljava vezu samo sa ta dva servisa.
 
-Optička mreža vodi pakete kroz cijan čvorove na tamnoplavom polju. Animacija prati put između pregledača, DNS-a, maila i servera, bez skrivanja pisanog objašnjenja.
+## Šta sam uradio
 
-## Šta je urađeno
+- Provera DNS zapisa koja hvata i SPF sa više od deset DNS upita, dva SPF zapisa na istom domenu i DMARC oznake koje više ne važe
+- Šema puta jednog mejla koju iscrtava GSAP, a lažna poruka na njoj ne prođe SPF, DKIM i DMARC
+- GSAP se učitava tek kad šema uđe u ekran, a bez skripte ili uz smanjeno kretanje šema odmah stoji nacrtana
+- Posebne strane za domen, DNS, poslovni mejl, sertifikat, rezervne kopije i hakovan sajt
+- Kontakt forma sa proverom unosa i ograničenjem broja zahteva
 
-- Posebne stranice za domene, DNS, mail, TLS i održavanje
-- Vizuelni put paketa vezan za objašnjenje usluge
-- Bezbednosna zaglavlja i provere privatnih putanja na živom izdanju
-- Dvojezična informaciona arhitektura sa 28 canonical ruta
-- Kontakt forma izdvojena po domenu i zaštićena validacijom i ograničenjem učestalosti
+## Merenja
 
-## Provere izdanja
+| | Performanse | Pristupačnost | Dobre prakse | SEO |
+| :-- | :-: | :-: | :-: | :-: |
+| Telefon | 100 | 100 | 100 | 100 |
+| Desktop | 100 | 100 | 100 | 100 |
 
-Svaka canonical ruta proverena je na širinama 390, 768, 1440 i 1920 px. Izdanje je provereno i bez JavaScript-a i uz reduced-motion postavku. Žive provere obuhvatile su HTTPS, preusmerenja, zaglavlja odgovora, strukturirane podatke, sitemap fajlove, zaštićene putanje i neispravne kontakt zahteve bez slanja test poruka.
+PageSpeed Insights, laboratorijsko merenje živog sajta, oktobar 2026. Sigurnosna zaglavlja: 6 od 6. HTML validator: bez grešaka. axe provera pristupačnosti: bez prekršaja. Strukturisani podaci: `FAQPage`, `Person`.
 
-Ovo su inženjerske provere, a ne tvrdnje o poziciji u pretrazi ili terenskim performansama.
+## Snimci ekrana
+
+<table>
+  <tr>
+    <td width="68%" valign="top"><img src="media/desktop.webp" alt="Svilenković IT, naslovna strana na ekranu širine 1440 px"></td>
+    <td width="32%" valign="top"><img src="media/mobile.webp" alt="Svilenković IT, naslovna strana na telefonu"></td>
+  </tr>
+</table>
+
+<img src="media/inner-1.webp" alt="Provera DNS zapisa sa ocenom svakog zapisa">
+<sub>Provera DNS zapisa sa ocenom svakog zapisa</sub>
 
 ---
 
-<sub>Dizajn i izrada: [D. Svilenković](https://svilenkovic.com).</sub>
+<sub>Izrada: [D. Svilenković](https://svilenkovic.rs).</sub>
